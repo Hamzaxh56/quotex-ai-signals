@@ -1,1 +1,1 @@
-# quotex-ai-signals
+Quotex AI V4 mobile dashboard. The chart uses SVG for Android-browser compatibility. Signals are demo UI data and are not guaranteed trading results.
