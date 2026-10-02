@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Market Signals V6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <div class="eyebrow">LIVE MARKET SIGNALS</div>
+        <h1>AI Signal Dashboard</h1>
+      </div>
+      <div id="status" class="status offline">OFFLINE</div>
+    </header>
+
+    <section class="settings card">
+      <label>PAIR
+        <select id="pair">
+          <option value="EUR/JPY">EUR/JPY</option>
+          <option value="GBP/JPY">GBP/JPY</option>
+          <option value="EUR/USD">EUR/USD</option>
+          <option value="GBP/USD">GBP/USD</option>
+          <option value="USD/JPY">USD/JPY</option>
+        </select>
+      </label>
+      <label>ANALYSIS TIMEFRAME
+        <select id="tf">
+          <option value="1min">1 MIN</option>
+          <option value="5min">5 MIN</option>
+          <option value="15min">15 MIN</option>
+        </select>
+      </label>
+      <label>SIGNAL EXPIRY
+        <select id="expiry">
+          <option value="1">1 MIN</option>
+          <option value="5">5 MIN</option>
+          <option value="15">15 MIN</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="section-title">MARKET FEED · <span id="feedTf">1 MIN</span></div>
+      <div class="chart-wrap"><canvas id="chart"></canvas></div>
+      <div id="price" class="price">Price: —</div>
+    </section>
+
+    <section class="signal">
+      <div class="eyebrow">NEXT CANDLE DIRECTION</div>
+      <div id="directionIcon" class="direction-icon">—</div>
+      <div id="direction" class="direction neutral">WAIT</div>
+      <div id="reason" class="reason">Connect a live data key to analyze the market.</div>
+    </section>
+
+    <section class="expiry card">
+      <div class="section-title">SIGNAL EXPIRY</div>
+      <div id="countdown" class="countdown">--:--</div>
+      <div id="expiresAt" class="expires">Waiting for live market data</div>
+    </section>
+
+    <section class="metrics">
+      <div class="metric card">
+        <div class="eyebrow">SIGNAL STRENGTH</div>
+        <strong id="strength">—</strong>
+      </div>
+      <div class="metric card">
+        <div class="eyebrow">TIMEFRAME</div>
+        <strong id="metricTf">1 MIN</strong>
+      </div>
+    </section>
+
+    <button id="reanalyze">↻ RE-ANALYZE</button>
+    <div id="foot" class="foot">Live data required · no guaranteed win rate</div>
+
+    <section class="history card">
+      <h2>Signal History</h2>
+      <div id="history"></div>
+    </section>
+
+    <section class="setup card">
+      <h2>Live API setup</h2>
+      <p>This version uses Twelve Data for real market candles. Your API key stays in this browser and is not included in the ZIP.</p>
+      <input id="apiKey" type="password" placeholder="Paste your Twelve Data API key">
+      <button id="saveKey" class="secondary">SAVE & CONNECT</button>
+      <small>Do not publish a private/pro key in a public repository. For GitHub Pages, use a browser-safe key with suitable limits, or put the API request behind your own server.</small>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
