@@ -1,0 +1,20 @@
+*{box-sizing:border-box}
+body{margin:0;background:#07080d;color:#fff;font-family:Arial,sans-serif}
+.app{min-height:100vh;background:radial-gradient(circle at 50% 10%,#250611,transparent 35%),#07080d}
+header{height:64px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #4a0d1e}
+.brand{font-weight:900;letter-spacing:2px}.brand span{display:inline-block;width:9px;height:9px;background:#ff164d;border-radius:50%;box-shadow:0 0 14px #ff164d;margin-right:8px}.brand b{color:#ff174f}
+.live{color:#36ff70;font-weight:800;font-size:11px}
+main{max-width:540px;margin:auto;padding:16px}.hero,.card,.history,.warning{border:1px solid #4b0d1d;border-radius:16px;background:#0d090e}
+.hero{text-align:center;padding:17px;margin-bottom:12px}.eyebrow{font-size:9px;letter-spacing:3px;color:#a78690}.hero h1{margin:8px 0;color:#ff2858;letter-spacing:4px;font-size:25px}
+.card{padding:13px}.grid2{display:grid;grid-template-columns:1fr 1.25fr;gap:8px}
+.grid2 small,.stats small,.next small{display:block;color:#a98a94;font-size:8px;letter-spacing:1.5px;margin:0 0 5px}
+.grid2 select{width:100%;background:#0b0b10;border:1px solid #4a1020;color:#fff;border-radius:9px;padding:11px 7px;font-size:11px}
+.chart{height:245px;margin-top:12px;border:1px solid #3a111d;border-radius:11px;background:#080b11;position:relative;overflow:hidden}.chart-title{position:absolute;z-index:2;top:8px;left:9px;color:#8f8188;font-size:9px;letter-spacing:1.2px}.chart svg{width:100%;height:100%}
+.next{text-align:center;padding:12px}.next #arrow{font-size:64px;line-height:65px;color:#20ff4d;text-shadow:0 0 20px #20ff4d}.next strong{font-size:28px;letter-spacing:4px;color:#20ff4d}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.stats>div{border:1px solid #42101e;border-radius:9px;padding:11px;text-align:center}.stats b{color:#ff315d;font-size:13px}
+.card button{width:100%;margin-top:12px;height:46px;background:#12090e;color:#ff315d;border:1px solid #ff315d;border-radius:10px;font-weight:900;letter-spacing:1.5px}.card p{font-size:9px;color:#8e7d84;text-align:center}
+.history{margin-top:12px;padding:12px}.history h2{font-size:14px;margin:0 0 8px}.row{display:flex;justify-content:space-between;border-top:1px solid #28151b;padding:8px 2px;font-size:10px}.up{color:#20ff4d}.down{color:#ff315d}
+.warning{margin-top:12px;padding:12px;color:#a39399;font-size:10px;line-height:1.5}
+.expiry-panel{margin:14px 0;padding:14px 16px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.035);text-align:center}
+.expiry-label{font-size:11px;letter-spacing:1.6px;opacity:.7;margin-bottom:5px}.expiry-countdown{font-size:30px;font-weight:800;letter-spacing:1px;line-height:1.15}.expiry-at{margin-top:5px;font-size:12px;opacity:.72}
+@media(max-width:390px){.grid2{grid-template-columns:1fr}.chart{height:210px}}
