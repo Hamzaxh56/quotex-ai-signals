@@ -1,1 +1,0 @@
-Deploy on Render as a Node Web Service. Build: npm install. Start: npm start. Add TWELVE_DATA_API_KEY. Open the Render onrender.com URL, not GitHub Pages. This app analyzes market data and does not place Quotex trades or guarantee profits.
